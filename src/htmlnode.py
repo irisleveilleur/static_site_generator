@@ -13,8 +13,9 @@ class HTMLNode:
     
     def attributes_to_html(self):
         html = ""
-        for key, value in self.attributes.items():
-            html += f' {key}="{value}"'
+        if self.attributes != None:
+            for key, value in self.attributes.items():
+                html += f' {key}="{value}"'
         return html
     
     def to_html(self):

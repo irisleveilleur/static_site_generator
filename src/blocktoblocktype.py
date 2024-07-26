@@ -3,7 +3,7 @@ import re
 def block_to_block_type(block):
     if re.match(r"#{1,6} .*", block):
         return "heading"
-    elif re.match(r"\`{3}\n.*\n*\`{3}", block):
+    elif re.match(r"```\n((.*)\n*)*```\n{0,1}", block):
         return "code"
     elif re.match(r"(\> .*)", block):
         return "quote"

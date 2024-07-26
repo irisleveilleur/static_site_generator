@@ -14,7 +14,7 @@ class TextNode:
     
     def to_html_node(self):
         if self.text_style == "text":
-            return LeafNode(self.text, "span", None)
+            return LeafNode(self.text, None, None)
         elif self.text_style == "code":
             return LeafNode(self.text, "code", None)
         elif self.text_style == "bold":
